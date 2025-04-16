@@ -1,0 +1,876 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Video Gallery</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f5f5f5;
+                color: #333;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            h1 {
+                text-align: center;
+                color: #2c3e50;
+                margin-bottom: 30px;
+            }
+            h2 {
+                color: #3498db;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 10px;
+                margin-top: 40px;
+            }
+            .video-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+            .video-container {
+                background: white;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            .video-container:hover {
+                transform: translateY(-5px);
+            }
+            .video-wrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+            }
+            .video-wrapper iframe,
+            .video-wrapper video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+            .video-info {
+                padding: 12px;
+            }
+            .video-title {
+                font-size: 16px;
+                margin: 0 0 8px 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .video-caption {
+                font-size: 14px;
+                color: #666;
+                margin: 0;
+                line-height: 1.4;
+            }
+            .navigation {
+                position: sticky;
+                top: 0;
+                background: #2c3e50;
+                padding: 10px 0;
+                margin-bottom: 20px;
+                z-index: 100;
+            }
+            .nav-links {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            .nav-link {
+                color: white;
+                text-decoration: none;
+                padding: 5px 10px;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+            .nav-link:hover {
+                background-color: #3498db;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Video Gallery</h1>
+            <div class="navigation">
+                <div class="nav-links">
+                        <a href="#quick_check: not satisfied" class="nav-link">quick_check: not satisfied</a>
+                    <a href="#quick_check: satisfied" class="nav-link">quick_check: satisfied</a>
+                    <a href="#prefiltered: not satisfied" class="nav-link">prefiltered: not satisfied</a>
+                    <a href="#prefiltered: satisfied" class="nav-link">prefiltered: satisfied</a>
+                    <a href="#final_visualization" class="nav-link">final_visualization</a>
+
+                </div>
+            </div>
+                <h2 id="quick_check: not satisfied">quick_check: not satisfied</h2>
+            <div class="video-grid">
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0KnMaInsbVg" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: 0KnMaInsbVg</h3>
+                        <p class="video-caption">Full-body: True; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/PBFV2Umc_rs" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: PBFV2Umc_rs</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/NKXvfyxinUM" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: NKXvfyxinUM</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/pEXlLP8x7P4" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: pEXlLP8x7P4</h3>
+                        <p class="video-caption">Full-body: True; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/-3ILasp5SPM" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -3ILasp5SPM</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/FpYtMrg3Ngw" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: FpYtMrg3Ngw</h3>
+                        <p class="video-caption">Full-body: True; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/N8u1QqTs6nI" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: N8u1QqTs6nI</h3>
+                        <p class="video-caption">Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/9QerI4xtqug" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 9QerI4xtqug</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Jl7hJF_Q8go" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: Jl7hJF_Q8go</h3>
+                        <p class="video-caption">Full-body: True; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/I4EwLcmmAx0" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: I4EwLcmmAx0</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1TEvDYivsJw" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 1TEvDYivsJw</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/-ULoLz4jp54" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -ULoLz4jp54</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ESDgJzISYhQ" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: ESDgJzISYhQ</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/a-6AaFJIKys" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: a-6AaFJIKys</h3>
+                        <p class="video-caption">Full-body: True; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0_foD_3s77Y" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0_foD_3s77Y</h3>
+                        <p class="video-caption">Full-body: False; Interaction: True</p>
+                    </div>
+                </div>
+                        </div>
+            <h2 id="quick_check: satisfied">quick_check: satisfied</h2>
+            <div class="video-grid">
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1TSRoi-CZ7g" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 1TSRoi-CZ7g</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8BZ4H1oIjg0" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 8BZ4H1oIjg0</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/-7G7LqAsStQ" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -7G7LqAsStQ</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0gkltXnwuiE" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0gkltXnwuiE</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/V6g8k5rH3T0" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: V6g8k5rH3T0</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/X-qsf99hano" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: X-qsf99hano</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8paM6pgfqNg" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 8paM6pgfqNg</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/LkJcIDnf2XM" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: LkJcIDnf2XM</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0_y2ggRRvcA" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0_y2ggRRvcA</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/-2FFkuG_5-M" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -2FFkuG_5-M</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/-bZ4yrpTcjw" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -bZ4yrpTcjw</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/4uBp1SkvoaY" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 4uBp1SkvoaY</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0fp_LpMTbfg" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0fp_LpMTbfg</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/083H_yQsGHY" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 083H_yQsGHY</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/brvLs7REg-w" allowfullscreen allow="fullscreen"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: brvLs7REg-w</h3>
+                        <p class="video-caption">Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+                        </div>
+            <h2 id="prefiltered: not satisfied">prefiltered: not satisfied</h2>
+            <div class="video-grid">
+
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1WT-ALNRHztq8u12AVgNSPax5b6-bXp3X/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 9nce5pyz_1o_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1WNSdgvu1i4V656wSONWJ8S6B4CpzmT-L/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: yQV0t5rMGqE_part_21</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1LIRIRiKmbNikGsA9rtl8qNPd_C5qWp1t/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: E160D9rEY0M_part_4</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1n6KQn5u2OPBI5u3o4LECcYUPQ1e7a_m9/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: YY9tErIBVQw_part_8</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1Y-CQmjkqdtRmvNpEiY6N1mS63SJ0zgEN/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: cev_R_2K0eI_part_36</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1IBAwxDwlqT5KtjoLMCpKqjFLLeUzARSQ/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 9ftyVfUrXu0_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1PugJ738lSL_vZ_VXRzMFn_4in_NDcPKl/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: cev_R_2K0eI_part_45</h3>
+                        <p class="video-caption">Static: False; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1uFIf09vK1Gz3f2Uge5bYhrrGfA1RQr0e/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -bjwUkET-88_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1078-ggNbrhtNnKGkzBlHu8X5cCzkeVTb/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: GiZ0L4WG7k0_part_16</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1UDMIPZsGIG2FkgI8gxZMaYdWWKHNSoBh/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: roOiTIjnAyM_part_22</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1kkn2uVGP0cXGNhY9dTUH9Gu5oNTjNAIC/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -ca9T9YVLPg_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1CuTm_l7OhW5yN7kuShDDZoKpF9qwEtQF/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: GU7mq8uZgJo_part_17</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1yIdkjpHrfvVsSVZ2sp0Yq2zQ-i0Ud8vU/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: CXgfNBnetzQ_part_2_part_2</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1E44GyHQQGUMSfLCHIKXqGHJJXPcKVG2R/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: GiZ0L4WG7k0_part_121</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/19z4L-Mr3_sK_MX_7q4Su-JhyZdjdQPz8/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -ZI9BkJ98gU_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: False; Interaction: False</p>
+                    </div>
+                </div>
+                        </div>
+            <h2 id="prefiltered: satisfied">prefiltered: satisfied</h2>
+            <div class="video-grid">
+
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1wmdKtchtvUqzwKdTNRqVIbgPph6FQiWc/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: qr53U0H3VPs_part_5</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1za-56ANz6oRrTVFlZ3w1w5M0keojqevn/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: aNmrsRp64jc_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/15t97yjU0aTfhivRa70tiw4nLPLnHRoXx/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0bEOq_gmJMg_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1gMRe-H1bTWkJ240XVhXX4--XQSEjsLpn/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -6OUP7kcEaU_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/15DflhdTAS0mTu2SChUgsD6OALusNRzM3/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: cz3bhS54By4_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1a3o-9PHOLy3qvJL4HcApugLEeT0CYfTg/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 1cnXFCsS0Fs_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1OQlluMu5G4rYxuK_jkjfEHbUv_HL5kgr/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: f3QwxKWHKbU_part_6</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/15LXQxzhMJ9281qHhr8IybEkshARnpOj1/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: tNjXiP1OS2w.30</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1EA8tbSWK-MNfNHnJjWWtUePNPiKYYXGz/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 1hMX5oP14Vo_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1bi6HgzdmhC8NNdD_rjALPKbwopbjKwvL/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: oADaM2L1YLc_part_1</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1hf0CCciZJBQBcflnnMu1X15i_Koc411M/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0gsg_iRYBI4_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1r1g8kueWsrLZ1T8WQAp076DfLNHrT_c8/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: yQV0t5rMGqE_part_23</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1TSm4-AUlUGWPuxnksP0R-apy6ovo7KBL/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: XCfb-RAKZNM.39_part_1</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1QtUM04HhgkP6nbeiFQ4a419LZcmiJxT1/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 6RaWjEvHkzw_crop</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1rKUUxu-DIwWa78N_RIwssjKrsQ9jnkz-/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: lv4jonqDOGU_part_34</h3>
+                        <p class="video-caption">Static: True; Full-body: True; Interaction: True</p>
+                    </div>
+                </div>
+                        </div>
+            <h2 id="final_visualization">final_visualization</h2>
+            <div class="video-grid">
+
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1r-e3Sajl85t2UY_D-CeQGe_QtDHotgFt/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: qr53U0H3VPs_part_5</h3>
+                        <p class="video-caption">Caption: The person stands on a soccer field, positioned between two cones. The person's right foot is on a soccer ball, which remains stationary throughout the sequence. The person's hands are relaxed at their sides, and they occasionally move slightly, adjusting their stance but not engaging in any dynamic activity. The person's body remains upright and stable, indicating a moment of pause or preparation.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1mSgXmFqVZOvHR-eO8RGm5Gg7hlSKfXz5/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: aNmrsRp64jc_crop</h3>
+                        <p class="video-caption">Caption: The person crawls forward on the snow-covered ground, moving closer to a fire hydrant. The person then stops and looks around before beginning to crawl back towards the starting point.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1nZTZehdqqKbi4ve1IQRjUFk6L1DEgbTh/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0bEOq_gmJMg_crop</h3>
+                        <p class="video-caption">Caption: The person sits on a chair, holding a cello. The person moves the bow across the strings of the cello, creating music. The person remains seated throughout the video, focusing on playing the instrument.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1qkSD9T2GQO8ku1r87ZTji2D6aSMcXZeP/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: -6OUP7kcEaU_crop</h3>
+                        <p class="video-caption">Caption: The person stands near a hockey net, facing slightly to the right. They hold a hockey stick in their right hand, positioned low, and their left arm is bent at the elbow, holding another part of the stick. The person appears to be preparing to take a shot or pass the puck. Their stance is steady, suggesting they are focused on the game.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1_q2zdmdRTBLY2xj00GFxPaEGb3fdeqd0/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: cz3bhS54By4_crop</h3>
+                        <p class="video-caption">Caption: The person stands on a skateboard, maintaining balance with their feet positioned apart. They shift their weight slightly, causing the skateboard to tilt and move forward smoothly over a paved surface. The person's arms hang naturally by their sides, and they continue to ride steadily.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/11BeQ5IX-ZQAqHKt9lH5hSazN8h5vHjwF/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 1cnXFCsS0Fs_crop</h3>
+                        <p class="video-caption">Caption: The person stands with feet shoulder-width apart, knees slightly bent, and arms relaxed by their sides. The person then raises both hands, palms facing forward, and brings a paddle into view, holding it in front of their chest with both hands. The person maintains this position momentarily before lowering the paddle back to the starting position. The person repeats this motion several times, alternating between raising and lowering the paddle.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1QjTCQlAU8jFv4wl8PIVGddik-malzc1c/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: f3QwxKWHKbU_part_6</h3>
+                        <p class="video-caption">Caption: The person stands with feet shoulder-width apart, knees slightly bent, and back straight. They grip a barbell loaded with weights, positioned across their upper back. The person then bends at the hips and knees, lowering their body until their thighs are parallel to the ground. They maintain a straight back throughout the movement. After reaching the bottom of the squat, they push through their heels to return to the starting position. This action is repeated several times.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1is85syKxAbnV3fgDzjzHbEiEXPKIss3V/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: tNjXiP1OS2w.30</h3>
+                        <p class="video-caption">Caption: The person stands on a sidewalk, holding a hose with both hands. The person moves slightly, shifting weight from one foot to the other while maintaining a firm grip on the hose. The person appears to be spraying water onto the ground near some plants.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/15dqBxqOIohOtofdiLctOECGsxVGKzwRz/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 1hMX5oP14Vo_crop</h3>
+                        <p class="video-caption">Caption: The person stands on a basketball court, holding a basketball in both hands. The person shifts weight from one foot to the other, maintaining a balanced stance. The person then begins to dribble the basketball between their legs, moving their hands rhythmically. The person continues this dribbling motion, keeping the ball close to their body.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1fcRu_DQedz8wYaU90m86LH5wZ1gj4lLM/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: oADaM2L1YLc_part_1</h3>
+                        <p class="video-caption">Caption: The person stands facing a workbench, bending forward to reach a tool on the bench. They pick up the tool with both hands and then stand upright, holding the tool in front of them. The person then places the tool back on the workbench and steps slightly to the side.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1EemFFVGGAOY3W9s6X4nWNmgBvdU8fWXW/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 0gsg_iRYBI4_crop</h3>
+                        <p class="video-caption">Caption: The person kneels on the grass, reaching out with both hands towards another individual who is also kneeling. The person then sits back on their heels, maintaining a relaxed posture.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/1kUOC2Qlhm0fbMzYfQLts0mbV5PcG_Vbi/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">online_video: yQV0t5rMGqE_part_23</h3>
+                        <p class="video-caption">Caption: The person stands upright, holding a folder in both hands. The person slightly shifts their weight from side to side, maintaining a steady stance.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/14OKFheVQJ3z-UWwSL9NDFNHvXq_zddNX/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">hdvila: XCfb-RAKZNM.39_part_1</h3>
+                        <p class="video-caption">Caption: The person sits at an organ, pressing keys with both hands. The person's body remains mostly stationary, with slight movements of the fingers as they play the instrument.</p>
+                    </div>
+                </div>
+            
+                <div class="video-container">
+                    
+                        <iframe src="https://drive.google.com/file/d/14aks_lh0w5jfzYbrbrh0GRoXkc7Pp6KT/preview" allow="autoplay; fullscreen" allowfullscreen style="width: 100%; height: 360px; border:0;"></iframe>
+                    
+                    <div class="video-info">
+                        <h3 class="video-title">kinetics: 6RaWjEvHkzw_crop</h3>
+                        <p class="video-caption">Caption: The person stands on a grassy field, facing slightly to the right. They extend their left arm forward, reaching out towards a soccer ball positioned on the ground. The person then steps forward with their right leg, bringing their left leg forward to follow. The person's body remains upright throughout this movement.</p>
+                    </div>
+                </div>
+                        </div>
+
+        </div>
+    </body>
+    </html>
+    
